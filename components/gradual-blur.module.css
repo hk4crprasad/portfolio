@@ -1,0 +1,12 @@
+.gradualBlur {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.page { pointer-events: none !important; }
+.inner { position: relative; width: 100%; height: 100%; }
+.layer { position: absolute; inset: 0; display: block; }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .layer { background: rgba(245, 245, 239, .26); }
+}

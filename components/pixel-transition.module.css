@@ -1,0 +1,38 @@
+.pixelatedCard {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--pixel-color, #fff);
+  outline: none;
+}
+
+.pixelatedCard:focus-visible {
+  outline: 2px solid var(--lime, #c7f46d);
+  outline-offset: 4px;
+}
+
+.defaultContent,
+.activeContent,
+.pixelGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.activeContent {
+  z-index: 2;
+  display: none;
+}
+
+.pixelGrid {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.pixel {
+  position: absolute;
+  display: none;
+}
