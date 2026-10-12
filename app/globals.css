@@ -1946,6 +1946,131 @@ i {
 }
 
 /* Motion is progressive: headings, links and the portrait work without it. */
+.scroll-work-scene {
+  position: relative;
+  height: 260svh;
+}
+.scroll-work-sticky {
+  position: sticky;
+  top: 88px;
+  height: calc(100svh - 104px);
+  display: grid;
+  grid-template-rows: auto minmax(220px, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+.scroll-project-story {
+  min-width: 0;
+  max-width: 480px;
+}
+.scroll-project-story h3 {
+  margin: 12px 0 16px;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+.scroll-project-summary {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.scroll-project-outcome {
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+}
+.scroll-project-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.scroll-project-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--surface);
+}
+.scroll-project-controls button:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: var(--blue-pale);
+}
+.scroll-project-controls button:disabled {
+  cursor: default;
+  opacity: 0.35;
+}
+.scroll-project-controls span {
+  min-width: 42px;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 12px;
+}
+.scroll-project-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 0;
+  color: var(--ink-muted);
+  font-size: 11px;
+}
+.scroll-work-stage {
+  min-width: 0;
+  height: 100%;
+  max-height: 580px;
+  overflow: clip;
+}
+.scroll-swap-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  padding-inline: 20px;
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.scroll-swap-card .project-visual {
+  height: calc(100% - 42px);
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: auto;
+}
+@media (min-width: 951px) {
+  .scroll-work-sticky {
+    top: 96px;
+    height: calc(100svh - 112px);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-rows: 1fr;
+    gap: 56px;
+  }
+}
+@media print {
+  .scroll-work-scene {
+    height: auto;
+  }
+  .scroll-work-sticky {
+    position: static;
+    height: auto;
+    display: block;
+  }
+  .scroll-work-stage,
+  .scroll-project-controls,
+  .scroll-project-hint {
+    display: none;
+  }
+}
+
 .hero-tech-text,
 .hero-tech-text.tech-text {
   width: min(100%, 360px);

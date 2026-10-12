@@ -10,10 +10,10 @@ import {
 } from "lucide-react";
 import { HeroActions } from "@/components/hero-actions";
 import { HeroTechText } from "@/components/hero-tech-text";
-import { ProjectCard } from "@/components/project-card";
+import { ScrollProjectStack } from "@/components/scroll-project-stack";
 import { ProfilePixelTransition } from "@/components/profile-pixel-transition";
 import { TechLogoLoop } from "@/components/tech-logo-loop";
-import { experience, profile, projects } from "@/data/portfolio";
+import { experience, profile } from "@/data/portfolio";
 
 export default function Home() {
   return (
@@ -133,11 +133,7 @@ export default function Home() {
             View all work <ArrowUpRight size={17} />
           </Link>
         </div>
-        <div className="home-work-grid">
-          {projects.slice(0, 3).map((project, index) => (
-            <ProjectCard project={project} index={index} key={project.slug} />
-          ))}
-        </div>
+        <ScrollProjectStack />
       </section>
 
       <section className="capability-section">

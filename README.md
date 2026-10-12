@@ -10,6 +10,8 @@ Use Node 22 or 24. Run `npm ci` and `npm run dev`. Copy `.env.example` to `.env.
 
 React Bits TechText animates the hero wordmark, PixelSwap reveals a profile note, LogoLoop scrolls technology logos, StarBorder highlights action buttons, and TargetCursor adds a desktop reticle. The portrait works with click, touch, Enter, and Space. The “Pause motion” control stops the effects across the site, and the system reduced-motion preference uses static alternatives. Technology links remain available through “Explore the stack”; no animation preference is stored or sent anywhere.
 
+Selected Work uses CardSwap to advance and reverse the featured project stack with page scrolling. Previous/next controls scroll to each project. Reduced motion, paused motion, and short viewports use the regular project grid.
+
 ## Validation
 
 ```sh
