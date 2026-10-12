@@ -1,29 +1,56 @@
+import localFont from "next/font/local";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { GlobalBlur } from "@/components/global-blur";
+import { siteUrl, pageMetadata } from "@/lib/site";
+
+const sans = localFont({
+  src: "../public/fonts/dm-sans-latin.9fea608a.woff2",
+  variable: "--font-sans",
+  weight: "100 1000",
+  display: "swap",
+  adjustFontFallback: "Arial",
+});
+const serif = localFont({
+  src: "../public/fonts/playfair-display-latin-italic.8f074624.woff2",
+  variable: "--font-serif",
+  weight: "500",
+  style: "italic",
+  display: "swap",
+  adjustFontFallback: "Times New Roman",
+});
 
 export const metadata: Metadata = {
+  ...pageMetadata(
+    "AI Architect & Agentic Builder",
+    "Portfolio of Haraprasad Hota: AI architecture, agentic systems, full-stack products, selected projects, and professional experience.",
+    "/",
+  ),
+  metadataBase: siteUrl,
   title: {
     default: "Haraprasad Hota — AI Architect & Agentic Builder",
     template: "%s — Haraprasad Hota",
   },
-  description:
-    "Portfolio of Haraprasad Hota, an AI architect and CTO building agentic systems, thoughtful products, and production-ready AI infrastructure.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  icons: { icon: "/favicon.svg" },
 };
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  // Dynamic rendering ensures each response's scripts match its fresh CSP nonce.
+  await headers();
   return (
-    <html lang="en">
+    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body>
-        <GlobalBlur />
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <div className="site-shell">
           <Header />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

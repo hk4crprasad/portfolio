@@ -1,0 +1,11 @@
+{
+  "finding": "Cold font swap caused layout shift; native Next.js local font preload and adjusted fallback implemented for verification.",
+  "scores": {
+    "performance": 88,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "CLS": 0.2107663486934337,
+  "blockingTimeMs": 53.5
+}

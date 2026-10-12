@@ -1,15 +1,41 @@
+import { ArrowUpRight, Play } from "lucide-react";
 type ProjectVisualProps = {
   slug: string;
   title: string;
   compact?: boolean;
 };
 
-export function ProjectVisual({ slug, title, compact = false }: ProjectVisualProps) {
-  const graphic = slug === "learnsync" ? <LearnSyncGraphic /> : slug === "youtube-summarizer" ? <SummaryGraphic /> : slug === "deepgram-voice-agent" ? <VoiceGraphic /> : <NutaanGraphic />;
+export function ProjectVisual({
+  slug,
+  title,
+  compact = false,
+}: ProjectVisualProps) {
+  const graphic =
+    slug === "learnsync" ? (
+      <LearnSyncGraphic />
+    ) : slug === "youtube-summarizer" ? (
+      <SummaryGraphic />
+    ) : slug === "deepgram-voice-agent" ? (
+      <VoiceGraphic />
+    ) : (
+      <NutaanGraphic />
+    );
 
   return (
-    <div className={`project-visual project-${slug} ${compact ? "is-compact" : ""}`} aria-label={`${title} visual identity`}>
-      <span className="project-visual-number">{slug === "learnsync" ? "01" : slug === "youtube-summarizer" ? "02" : slug === "deepgram-voice-agent" ? "03" : "04"}</span>
+    <div
+      className={`project-visual project-${slug} ${compact ? "is-compact" : ""}`}
+      role="img"
+      aria-label={`${title}: abstract project illustration`}
+    >
+      <span className="project-visual-number">
+        {slug === "learnsync"
+          ? "01"
+          : slug === "youtube-summarizer"
+            ? "02"
+            : slug === "deepgram-voice-agent"
+              ? "03"
+              : "04"}
+      </span>
       {graphic}
       <span className="project-visual-label">{title}</span>
     </div>
@@ -23,7 +49,9 @@ function LearnSyncGraphic() {
       <span className="learnsync-node node-a" />
       <span className="learnsync-node node-b" />
       <span className="learnsync-node node-c" />
-      <div className="learnsync-card">your path <b>↗</b></div>
+      <div className="learnsync-card">
+        your path <ArrowUpRight size={16} aria-hidden="true" />
+      </div>
     </div>
   );
 }
@@ -35,7 +63,9 @@ function SummaryGraphic() {
       <span className="summary-line l2" />
       <span className="summary-line l3" />
       <span className="summary-line l4" />
-      <span className="summary-play">▶</span>
+      <span className="summary-play">
+        <Play size={24} aria-hidden="true" />
+      </span>
       <span className="summary-orbit" />
     </div>
   );

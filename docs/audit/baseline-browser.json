@@ -1,0 +1,271 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "overflow": [
+      "hero-grid",
+      "hero-copy",
+      "eyebrow hero-kicker",
+      "",
+      "hero-intro",
+      "hero-actions",
+      "magnet-module__RwmE6W__wrapper ",
+      "star-border-module__kwCoBG__borderGradientBottom",
+      "star-border-module__kwCoBG__borderGradientTop",
+      "magnet-module__RwmE6W__wrapper ",
+      "hero-signals",
+      "hero-portrait-wrap"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 2
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 3
+      },
+      {
+        "id": "svg-img-alt",
+        "impact": "serious",
+        "nodes": 11
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/contact",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "overflow": [
+      "contact-info",
+      "",
+      "quick-reach",
+      "eyebrow",
+      "curved-input-module__7Zi8jW__curvedInput  ",
+      {},
+      {},
+      {},
+      {},
+      {},
+      "curved-input-module__7Zi8jW__field",
+      "big-email"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/work",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "overflow": [
+      "learnsync-path",
+      "summary-orbit",
+      "voice-ring ring-three"
+    ],
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "overflow": [
+      "hero-grid",
+      "star-border-module__kwCoBG__borderGradientBottom",
+      "star-border-module__kwCoBG__borderGradientTop",
+      "learnsync-path",
+      "summary-orbit",
+      "voice-ring ring-three",
+      "tech-strip",
+      "logo-loop-module__WM1UQG__logoloop logo-loop-module__WM1UQG__fade logo-loop-module__WM1UQG__scaleHover",
+      "logo-loop-module__WM1UQG__track",
+      "logo-loop-module__WM1UQG__list",
+      "logo-loop-module__WM1UQG__item",
+      "logo-loop-module__WM1UQG__link"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 2
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 3
+      },
+      {
+        "id": "svg-img-alt",
+        "impact": "serious",
+        "nodes": 11
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "overflow": [
+      "star-border-module__kwCoBG__borderGradientBottom",
+      "star-border-module__kwCoBG__borderGradientTop"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "route": "/work",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "overflow": [
+      "learnsync-path",
+      "summary-orbit",
+      "voice-ring ring-three"
+    ],
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "overflow": [
+      "hero-grid",
+      "hero-antigravity",
+      "",
+      "",
+      "",
+      "star-border-module__kwCoBG__borderGradientTop",
+      "learnsync-path",
+      "summary-orbit",
+      "voice-ring ring-three",
+      "tech-strip",
+      "logo-loop-module__WM1UQG__logoloop logo-loop-module__WM1UQG__fade logo-loop-module__WM1UQG__scaleHover",
+      "logo-loop-module__WM1UQG__track"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 2
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 2
+      },
+      {
+        "id": "svg-img-alt",
+        "impact": "serious",
+        "nodes": 11
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/contact",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "overflow": [
+      "star-border-module__kwCoBG__borderGradientTop"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "route": "/work",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "overflow": [
+      "learnsync-path",
+      "summary-orbit",
+      "voice-ring ring-three"
+    ],
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "overflow": [
+      "hero-grid",
+      "star-border-module__kwCoBG__borderGradientTop",
+      "tech-strip",
+      "logo-loop-module__WM1UQG__logoloop logo-loop-module__WM1UQG__fade logo-loop-module__WM1UQG__scaleHover",
+      "logo-loop-module__WM1UQG__track",
+      "logo-loop-module__WM1UQG__list",
+      "logo-loop-module__WM1UQG__item",
+      "logo-loop-module__WM1UQG__link",
+      "logo-loop-module__WM1UQG__node",
+      {},
+      {},
+      "logo-loop-module__WM1UQG__list"
+    ],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 3
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 3
+      },
+      {
+        "id": "svg-img-alt",
+        "impact": "serious",
+        "nodes": 11
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "overflow": [],
+    "violations": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/work",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "overflow": [
+      "learnsync-path",
+      "summary-orbit"
+    ],
+    "violations": []
+  }
+]

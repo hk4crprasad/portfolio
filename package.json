@@ -5,28 +5,36 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}"
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "scan:secrets": "node scripts/scan-secrets.mjs"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=22 <25"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.6.1",
-    "gsap": "^3.15.0",
-    "lucide-react": "^0.468.0",
-    "mathjs": "^15.2.0",
-    "next": "^16.0.1",
-    "ogl": "^1.0.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.7.0",
-    "three": "^0.185.1"
+    "lucide-react": "0.468.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.64.0",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@types/three": "^0.185.1",
-    "typescript": "^5.7.2"
+    "eslint": "9.39.5",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "tsx": "4.23.15",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "8.71.1"
   }
 }

@@ -1,0 +1,77 @@
+[
+  {
+    "url": "https://github.com/hk4crprasad",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://github.com/hk4crprasad/LearnSync",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://github.com/hk4crprasad/youtube-summarizer",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://github.com/hk4crprasad/deepgram-voice-agent-demo",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.python.org",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.djangoproject.com",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://fastapi.tiangolo.com",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.docker.com",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.postgresql.org",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://nextjs.org",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://react.dev",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.typescriptlang.org",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://huggingface.co",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://cloud.google.com",
+    "status": "200",
+    "exitCode": 0
+  },
+  {
+    "url": "https://www.mongodb.com",
+    "status": "200",
+    "exitCode": 0
+  }
+]

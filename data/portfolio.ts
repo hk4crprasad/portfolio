@@ -20,7 +20,7 @@ export const profile = {
   email: "haraprasadhota1@gmail.com",
   location: "Puri, Odisha, India",
   github: "https://github.com/hk4crprasad",
-  avatar: "https://avatars.githubusercontent.com/u/156574789?v=4",
+  avatar: "/portrait.jpg",
 };
 
 export const projects: Project[] = [
@@ -35,7 +35,13 @@ export const projects: Project[] = [
     detail:
       "LearnSync combines a TypeScript frontend with a Python AI backend to shape learning around the student, not the syllabus. The product pairs personalized study plans and feedback with streaming chat, voice experiences, visual learning games, and an Odia-first AI assistant.",
     outcome: "3rd place · BPUT Hackathon 2025",
-    technologies: ["TypeScript", "Python", "AI tutoring", "WebSockets", "Azure OpenAI"],
+    technologies: [
+      "TypeScript",
+      "Python",
+      "AI tutoring",
+      "WebSockets",
+      "Azure OpenAI",
+    ],
     features: [
       {
         title: "Adaptive by design",

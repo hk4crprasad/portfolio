@@ -1,8 +1,8 @@
 node_modules/
 .next*/
-.next-verify/
-.next-check/
-.next-heroku-check/
-.firecrawl/
+*.tsbuildinfo
 *.log
 .env*
+!.env.example
+test-results/
+playwright-report/
