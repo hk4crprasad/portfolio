@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MotionProvider } from "@/components/motion-provider";
 import { siteUrl, pageMetadata } from "@/lib/site";
 
 const sans = localFont({
@@ -43,16 +44,18 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body>
-        <a className="skip-link" href="#main-content">
-          Skip to content
-        </a>
-        <div className="site-shell">
-          <Header />
-          <main id="main-content" tabIndex={-1}>
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <MotionProvider>
+          <a className="skip-link" href="#main-content">
+            Skip to content
+          </a>
+          <div className="site-shell">
+            <Header />
+            <main id="main-content" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </MotionProvider>
       </body>
     </html>
   );

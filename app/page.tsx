@@ -9,6 +9,7 @@ import {
   Layers,
 } from "lucide-react";
 import { HeroActions } from "@/components/hero-actions";
+import { HeroTechText } from "@/components/hero-tech-text";
 import { ProjectCard } from "@/components/project-card";
 import { ProfilePixelTransition } from "@/components/profile-pixel-transition";
 import { TechLogoLoop } from "@/components/tech-logo-loop";
@@ -22,6 +23,7 @@ export default function Home() {
           <p className="eyebrow hero-kicker">
             <span className="live-dot" /> Available for thoughtful builds
           </p>
+          <HeroTechText />
           <h1>
             AI that feels <em>considered.</em>
             <br />

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight, Copy } from "lucide-react";
 import { useRef, useState, type FormEvent } from "react";
 import { profile } from "@/data/portfolio";
+import { MotionButton } from "./motion-actions";
 import {
   contactLimits,
   createEmailDraft,
@@ -144,7 +145,7 @@ export function EmailDraftForm({ quick = false }: { quick?: boolean }) {
           </div>
         );
       })}
-      <button
+      <MotionButton
         className="button button-dark"
         type="submit"
         disabled={busy || Boolean(draft)}
@@ -157,7 +158,7 @@ export function EmailDraftForm({ quick = false }: { quick?: boolean }) {
               ? "Say hello"
               : "Prepare email"}
         <ArrowUpRight size={17} aria-hidden="true" />
-      </button>
+      </MotionButton>
       <p className="form-note" id={`${prefix}-note`}>
         Opens your email app. Details stay in this browser until you send the
         email. <Link href="/privacy">Privacy details</Link>.

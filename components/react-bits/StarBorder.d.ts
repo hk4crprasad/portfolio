@@ -1,0 +1,21 @@
+import type { ComponentPropsWithoutRef, ElementType, ReactElement } from "react";
+export type StarBorderProps<T extends ElementType = "button"> = Omit<ComponentPropsWithoutRef<T>, "as"> & {
+  as?: T;
+  color?: string;
+  trailColor?: string;
+  duration?: number;
+  direction?: "clockwise" | "counterclockwise";
+  stars?: number;
+  trailLength?: number;
+  thickness?: number;
+  radius?: number;
+  glow?: number;
+  sparkle?: boolean;
+  hover?: "lap" | "brighten" | "reveal" | "none";
+  clickPulse?: boolean;
+  theme?: "dark" | "light";
+  backgroundColor?: string;
+  textColor?: string;
+  borderColor?: string;
+};
+export default function StarBorder<T extends ElementType = "button">(props: StarBorderProps<T>): ReactElement;

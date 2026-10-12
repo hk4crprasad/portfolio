@@ -15,6 +15,20 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    files: ["components/react-bits/*.jsx"],
+    languageOptions: {
+      globals: Object.fromEntries([
+        "window", "document", "performance", "getComputedStyle", "requestAnimationFrame", "cancelAnimationFrame", "ResizeObserver", "IntersectionObserver",
+      ].map((name) => [name, "readonly"])),
+    },
+    plugins: { "react-hooks": hooks, "jsx-a11y": jsxA11y },
+    rules: {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error",
+      ...jsxA11y.configs.recommended.rules,
+    },
+  },
+  {
     files: ["**/*.tsx"],
     plugins: { "react-hooks": hooks, "jsx-a11y": jsxA11y },
     rules: {

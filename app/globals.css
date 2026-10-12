@@ -1832,3 +1832,136 @@ i {
     width: 100%;
   }
 }
+
+/* Motion is progressive: headings, links and the portrait work without it. */
+.hero-tech-text,
+.hero-tech-text.tech-text {
+  width: min(100%, 360px);
+  height: 72px;
+  margin: -12px 0 20px;
+}
+.hero-tech-text-static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+.motion-toggle {
+  position: fixed;
+  z-index: 40;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  font-weight: 600;
+}
+.site-footer {
+  padding-bottom: 88px;
+}
+.star-border.button {
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.portrait-pixel-swap {
+  height: 100%;
+  cursor: pointer;
+}
+.portrait-profile-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 100%;
+  padding: 22px 18px 42px;
+  color: var(--ink);
+  background: radial-gradient(circle at 50% 18%, #ffffff, var(--blue-pale) 60%);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.portrait-profile-note strong {
+  font-size: clamp(1.1rem, 4vw, 1.65rem);
+  letter-spacing: -0.04em;
+}
+.portrait-monogram {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--blue);
+  border-radius: 16px;
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.1em;
+}
+.portrait-swap-hint {
+  position: absolute;
+  z-index: 4;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tech-loop {
+  padding-top: 12px;
+}
+.tech-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+}
+.tech-logo > span {
+  font-size: 15px;
+  font-weight: 600;
+}
+.technology-list a {
+  gap: 10px;
+}
+.tech-details {
+  margin-top: 18px;
+  text-align: center;
+}
+.tech-details summary {
+  width: fit-content;
+  min-height: 44px;
+  margin-inline: auto;
+  padding: 10px 18px;
+  border: 1px solid #6d824f;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media print {
+  .motion-toggle, .target-cursor, .tech-loop {
+    display: none;
+  }
+}

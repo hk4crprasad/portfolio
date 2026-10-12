@@ -6,6 +6,10 @@ Next.js App Router, React, TypeScript, CSS, and Lucide. Content lives in `data/p
 
 Use Node 22 or 24. Run `npm ci` and `npm run dev`. Copy `.env.example` to `.env.local` if overriding the domain. `SITE_URL` is server-only, defaults to the owner-supplied `https://hk4crprasad.site/`, and must be an HTTPS origin in production. There are no application secrets, accounts, database, API routes, or uploads.
 
+## Motion graphics
+
+React Bits TechText animates the hero wordmark, PixelSwap reveals a profile note, LogoLoop scrolls technology logos, StarBorder highlights action buttons, and TargetCursor adds a desktop reticle. The portrait works with click, touch, Enter, and Space. The “Pause motion” control stops the effects across the site, and the system reduced-motion preference uses static alternatives. Technology links remain available through “Explore the stack”; no animation preference is stored or sent anywhere.
+
 ## Validation
 
 ```sh

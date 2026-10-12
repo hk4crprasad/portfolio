@@ -1,26 +1,54 @@
+"use client";
+
+import { SiPython, SiDjango, SiFastapi, SiHuggingface, SiGooglecloud, SiMongodb, SiDocker, SiPostgresql, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
+import { useMotionEnabled } from "./motion-provider";
+import LogoLoop from "./react-bits/LogoLoop";
+
 const technologies = [
-  ["Python", "https://www.python.org"],
-  ["Django", "https://www.djangoproject.com"],
-  ["FastAPI", "https://fastapi.tiangolo.com"],
-  ["Hugging Face", "https://huggingface.co"],
-  ["Google Cloud", "https://cloud.google.com"],
-  ["MongoDB", "https://www.mongodb.com"],
-  ["Docker", "https://www.docker.com"],
-  ["PostgreSQL", "https://www.postgresql.org"],
-  ["Next.js", "https://nextjs.org"],
-  ["React", "https://react.dev"],
-  ["TypeScript", "https://www.typescriptlang.org"],
+  { name: "Python", url: "https://www.python.org", Icon: SiPython },
+  { name: "Django", url: "https://www.djangoproject.com", Icon: SiDjango },
+  { name: "FastAPI", url: "https://fastapi.tiangolo.com", Icon: SiFastapi },
+  { name: "Hugging Face", url: "https://huggingface.co", Icon: SiHuggingface },
+  { name: "Google Cloud", url: "https://cloud.google.com", Icon: SiGooglecloud },
+  { name: "MongoDB", url: "https://www.mongodb.com", Icon: SiMongodb },
+  { name: "Docker", url: "https://www.docker.com", Icon: SiDocker },
+  { name: "PostgreSQL", url: "https://www.postgresql.org", Icon: SiPostgresql },
+  { name: "Next.js", url: "https://nextjs.org", Icon: SiNextdotjs },
+  { name: "React", url: "https://react.dev", Icon: SiReact },
+  { name: "TypeScript", url: "https://www.typescriptlang.org", Icon: SiTypescript },
 ];
-export function TechLogoLoop() {
+
+const logos = technologies.map(({ name, Icon }) => ({
+  title: name,
+  node: <span className="tech-logo"><Icon aria-hidden="true" /><span>{name}</span></span>,
+}));
+
+function TechnologyLinks() {
   return (
     <ul className="technology-list container">
-      {technologies.map(([name, url]) => (
+      {technologies.map(({ name, url, Icon }) => (
         <li key={name}>
           <a href={url} target="_blank" rel="noopener noreferrer">
-            {name}
+            <Icon size={20} aria-hidden="true" />{name}
           </a>
         </li>
       ))}
     </ul>
+  );
+}
+
+export function TechLogoLoop() {
+  const enabled = useMotionEnabled();
+  if (!enabled) return <TechnologyLinks />;
+  return (
+    <div className="tech-loop">
+      <div aria-hidden="true">
+        <LogoLoop logos={logos} speed={42} logoHeight={26} gap={48} hoverSpeed={0} fadeOut fadeOutColor="#c7ef87" scaleOnHover />
+      </div>
+      <details className="tech-details">
+        <summary>Explore the stack</summary>
+        <TechnologyLinks />
+      </details>
+    </div>
   );
 }
