@@ -31,7 +31,7 @@ export function ProfilePixelTransition({
             <span className="portrait-monogram" aria-hidden="true">HH</span>
             <span className="eyebrow">AI · Product · Systems</span>
             <strong>{profile.name}</strong>
-            <span>Building useful intelligence.<br />Based in Odisha, India.</span>
+            <span>{profile.role}<br />Based in Odisha, India.</span>
           </div>
         }
         trigger="click"

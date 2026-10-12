@@ -1,6 +1,7 @@
 "use client";
 
-import { SiPython, SiDjango, SiFastapi, SiHuggingface, SiGooglecloud, SiMongodb, SiDocker, SiPostgresql, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
+import { SiPython, SiDjango, SiFastapi, SiHuggingface, SiLanggraph, SiMongodb, SiDocker, SiPostgresql, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
+import { Cloud, Layers, Server } from "lucide-react";
 import { useMotionEnabled } from "./motion-provider";
 import LogoLoop from "./react-bits/LogoLoop";
 
@@ -9,7 +10,10 @@ const technologies = [
   { name: "Django", url: "https://www.djangoproject.com", Icon: SiDjango },
   { name: "FastAPI", url: "https://fastapi.tiangolo.com", Icon: SiFastapi },
   { name: "Hugging Face", url: "https://huggingface.co", Icon: SiHuggingface },
-  { name: "Google Cloud", url: "https://cloud.google.com", Icon: SiGooglecloud },
+  { name: "LangGraph", url: "https://docs.langchain.com/oss/python/langgraph/overview", Icon: SiLanggraph },
+  { name: "Azure", url: "https://azure.microsoft.com", Icon: Layers },
+  { name: "AWS", url: "https://aws.amazon.com", Icon: Cloud },
+  { name: "Heroku", url: "https://www.heroku.com", Icon: Server },
   { name: "MongoDB", url: "https://www.mongodb.com", Icon: SiMongodb },
   { name: "Docker", url: "https://www.docker.com", Icon: SiDocker },
   { name: "PostgreSQL", url: "https://www.postgresql.org", Icon: SiPostgresql },

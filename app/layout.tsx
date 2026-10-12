@@ -25,13 +25,13 @@ const serif = localFont({
 
 export const metadata: Metadata = {
   ...pageMetadata(
-    "AI Architect & Agentic Builder",
-    "Portfolio of Haraprasad Hota: AI architecture, agentic systems, full-stack products, selected projects, and professional experience.",
+    "AI/ML Engineer · AI Prompt & Loop Designer",
+    "Haraprasad Hota: AI/ML engineer, AI prompt and loop designer, and MCA student building LLM applications, AI agents, RAG pipelines, and FastAPI backends.",
     "/",
   ),
   metadataBase: siteUrl,
   title: {
-    default: "Haraprasad Hota — AI Architect & Agentic Builder",
+    default: "Haraprasad Hota — AI/ML Engineer · AI Prompt & Loop Designer",
     template: "%s — Haraprasad Hota",
   },
   icons: { icon: "/favicon.svg" },

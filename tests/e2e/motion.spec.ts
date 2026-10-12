@@ -11,12 +11,12 @@ test("motion components render, the loop moves, and pause keeps the stack usable
   const before = await track.evaluate((element) => getComputedStyle(element).transform);
   await expect.poll(() => track.evaluate((element) => getComputedStyle(element).transform)).not.toBe(before);
   await page.getByText("Explore the stack", { exact: true }).click();
-  await expect(strip.getByRole("link")).toHaveCount(11);
+  await expect(strip.getByRole("link")).toHaveCount(14);
   await strip.getByRole("link", { name: "Python", exact: true }).focus();
   await expect(strip.getByRole("link", { name: "Python", exact: true })).toBeFocused();
   await page.getByRole("button", { name: "Pause motion" }).click();
   await expect(page.locator(".tech-strip .logoloop")).toHaveCount(0);
-  await expect(strip.getByRole("link")).toHaveCount(11);
+  await expect(strip.getByRole("link")).toHaveCount(14);
   await expect(page.locator(".tech-text-canvas, .star-border__light, .target-cursor")).toHaveCount(0);
   await page.getByRole("button", { name: "Play motion" }).click();
   await expect(page.locator(".tech-strip .logoloop")).toBeVisible();
@@ -31,7 +31,7 @@ test("portrait swaps by keyboard and touch-compatible clicks without duplicate a
   await expect(portrait).toHaveAttribute("data-transitioning", "true");
   await expect(portrait.locator(".pixel-swap__pixel").first()).toBeAttached();
   await expect(page.getByRole("button", { name: "Show portrait" })).toHaveAttribute("data-transitioning", "false");
-  await expect(page.locator(".pixel-swap__layer[data-visible='true']")).toContainText("Building useful intelligence.");
+  await expect(page.locator(".pixel-swap__layer[data-visible='true']")).toContainText("AI/ML Engineer · AI Prompt & Loop Designer");
   await page.keyboard.press("Space");
   await expect(portrait).toHaveAttribute("data-active", "false");
   await expect(page.getByRole("button", { name: "Reveal profile note" })).toHaveAttribute("data-transitioning", "false");
@@ -52,8 +52,8 @@ test("system reduced-motion changes stop effects and the desktop cursor preserve
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator(".target-cursor, .tech-text-canvas, .star-border__light, .logoloop")).toHaveCount(0);
   await expect(page.getByRole("button", { name: "Pause motion" })).toHaveCount(0);
-  await expect(page.locator(".hero-tech-text-static")).toHaveText("Agentic builder");
-  await expect(page.locator(".technology-list a")).toHaveCount(11);
+  await expect(page.locator(".hero-tech-text-static")).toHaveText("Prompt & loop designer");
+  await expect(page.locator(".technology-list a")).toHaveCount(14);
   await action.click();
   await expect(page).toHaveURL(/\/work$/);
 });

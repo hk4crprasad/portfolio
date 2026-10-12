@@ -7,7 +7,7 @@ export function HeroTechText() {
   const enabled = useMotionEnabled();
   return enabled ? (
     <TechText
-      text="Agentic builder"
+      text="Prompt & loop designer"
       className="hero-tech-text"
       fontSize={42}
       fontWeight={600}
@@ -19,6 +19,6 @@ export function HeroTechText() {
       speed={1.2}
     />
   ) : (
-    <div className="hero-tech-text hero-tech-text-static">Agentic builder</div>
+    <div className="hero-tech-text hero-tech-text-static">Prompt & loop designer</div>
   );
 }

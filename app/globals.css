@@ -1247,6 +1247,118 @@ i {
   color: var(--blue);
 }
 
+/* Resume, education, and project evidence */
+.resume-section {
+  padding-block: 0 72px;
+}
+.resume-education,
+.resume-qualifications {
+  display: grid;
+  gap: 24px;
+}
+.resume-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.resume-card h3 {
+  margin: 12px 0;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.resume-card p:not(.eyebrow) {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.resume-card .resume-result {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.resume-qualifications h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.resume-records {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.resume-records li {
+  padding-block: 20px;
+  border-top: 1px solid var(--line);
+}
+.resume-records a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.resume-records h3,
+.resume-records a {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.resume-records p {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+.project-nutaan-cli,
+.project-medikiosk {
+  background: var(--blue-pale);
+}
+.project-sih-2026-portal {
+  background: #e6efdc;
+}
+.workflow-graphic {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.workflow-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(72%, 280px);
+  padding: 22px;
+  border: 1px solid #a9b8d6;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--blue);
+  font-size: 14px;
+  box-shadow: var(--shadow);
+  transform: rotate(-6deg);
+}
+.workflow-line {
+  width: 100%;
+  height: 2px;
+  background: #a9b8d6;
+}
+.workflow-line-short {
+  width: 65%;
+}
+.workflow-outcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 12px;
+}
+@media (min-width: 951px) {
+  .resume-education,
+  .resume-qualifications {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Email drafts: local only, no submission endpoint */
 .contact-layout {
   display: grid;

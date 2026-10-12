@@ -16,7 +16,7 @@ export function ProjectCard({
         <div className="project-card-meta">
           <span>{String(index + 1).padStart(2, "0")}</span>
           <span>{project.category}</span>
-          <span>{project.year}</span>
+          {project.year && <span>{project.year}</span>}
         </div>
         <h2>{project.title}</h2>
         <p>{project.summary}</p>

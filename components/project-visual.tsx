@@ -1,4 +1,5 @@
-import { ArrowUpRight, Play } from "lucide-react";
+import { ArrowUpRight, ClipboardPlus, Play, Users } from "lucide-react";
+import { projects } from "@/data/portfolio";
 type ProjectVisualProps = {
   slug: string;
   title: string;
@@ -11,11 +12,17 @@ export function ProjectVisual({
   compact = false,
 }: ProjectVisualProps) {
   const graphic =
-    slug === "learnsync" ? (
+    slug === "nutaan-cli" ? (
+      <NutaanGraphic prompt="plan()" output="build" />
+    ) : slug === "medikiosk" ? (
+      <WorkflowGraphic kind="clinical" />
+    ) : slug === "sih-2026-portal" ? (
+      <WorkflowGraphic kind="registration" />
+    ) : slug === "learnsync" ? (
       <LearnSyncGraphic />
     ) : slug === "youtube-summarizer" ? (
       <SummaryGraphic />
-    ) : slug === "deepgram-voice-agent" ? (
+    ) : slug === "deepgram-voice-agent" || slug === "nutaan-ai" ? (
       <VoiceGraphic />
     ) : (
       <NutaanGraphic />
@@ -28,13 +35,7 @@ export function ProjectVisual({
       aria-label={`${title}: abstract project illustration`}
     >
       <span className="project-visual-number">
-        {slug === "learnsync"
-          ? "01"
-          : slug === "youtube-summarizer"
-            ? "02"
-            : slug === "deepgram-voice-agent"
-              ? "03"
-              : "04"}
+        {String(projects.findIndex((project) => project.slug === slug) + 1).padStart(2, "0")}
       </span>
       {graphic}
       <span className="project-visual-label">{title}</span>
@@ -83,14 +84,28 @@ function VoiceGraphic() {
   );
 }
 
-function NutaanGraphic() {
+function NutaanGraphic({ prompt = "reason()", output = "signal" }: { prompt?: string; output?: string }) {
   return (
     <div className="nutaan-graphic" aria-hidden="true">
       <span className="nutaan-grid" />
-      <span className="nutaan-prompt">reason()</span>
-      <span className="nutaan-output">signal</span>
+      <span className="nutaan-prompt">{prompt}</span>
+      <span className="nutaan-output">{output}</span>
       <span className="nutaan-axis axis-one" />
       <span className="nutaan-axis axis-two" />
+    </div>
+  );
+}
+
+function WorkflowGraphic({ kind }: { kind: "clinical" | "registration" }) {
+  return (
+    <div className="workflow-graphic" aria-hidden="true">
+      <div className="workflow-card">
+        {kind === "clinical" ? <ClipboardPlus size={40} /> : <Users size={40} />}
+        <span>{kind === "clinical" ? "Patient history" : "18 teams"}</span>
+        <span className="workflow-line" />
+        <span className="workflow-line workflow-line-short" />
+        <span className="workflow-outcome">{kind === "clinical" ? "Physician review" : "108 students"}<ArrowUpRight size={16} /></span>
+      </div>
     </div>
   );
 }

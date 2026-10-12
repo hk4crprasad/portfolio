@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/site";
-import { Github, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { ContactQuickReach } from "@/components/contact-quick-reach";
 import { PageIntro } from "@/components/page-intro";
@@ -7,7 +7,7 @@ import { profile } from "@/data/portfolio";
 
 export const metadata = pageMetadata(
   "Contact",
-  "Contact Haraprasad Hota about AI architecture, product ideas, and technical collaboration using your preferred email app.",
+  "Contact Haraprasad Hota for AI/ML engineering, AI prompt and loop design, software engineering roles, and technical collaboration.",
   "/contact",
 );
 
@@ -28,8 +28,8 @@ export default function ContactPage() {
       <section className="container contact-layout">
         <div className="contact-info">
           <p>
-            For product ideas, technical collaborations, AI architecture, and
-            conversations with a little ambition.
+            For AI/ML Engineer or Software Engineer roles, prompt and agent-loop
+            design, AI projects, and technical collaborations.
           </p>
           <ContactQuickReach />
           <a className="big-email" href={`mailto:${profile.email}`}>
@@ -44,6 +44,12 @@ export default function ContactPage() {
             </a>
             <a href={`mailto:${profile.email}`}>
               <Mail size={16} /> Email directly
+            </a>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+              <Linkedin size={16} aria-hidden="true" /> Connect on LinkedIn
+            </a>
+            <a href={profile.phoneHref}>
+              <Phone size={16} aria-hidden="true" /> {profile.phone}
             </a>
           </div>
         </div>

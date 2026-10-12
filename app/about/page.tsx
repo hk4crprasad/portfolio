@@ -1,13 +1,13 @@
 import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
-import { ArrowUpRight, Github, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { ProfilePixelTransition } from "@/components/profile-pixel-transition";
-import { profile, skills } from "@/data/portfolio";
+import { achievements, certifications, education, profile, skills } from "@/data/portfolio";
 
 export const metadata = pageMetadata(
   "About",
-  "Meet Haraprasad Hota, an AI architect and technical leader working across agentic systems, backend architecture, and product delivery.",
+  "Meet Haraprasad Hota, an AI/ML engineer, AI prompt and loop designer, and MCA student at IMIT Cuttack with 3+ years of remote industry experience.",
   "/about",
 );
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <em>Useful by choice.</em>
           </>
         }
-        intro="I’m a builder with an architect’s appetite for the whole system—technical foundation, human behavior, product payoff, and all the connections between them."
+        intro="I’m an AI/ML engineer, AI prompt & loop designer, and MCA student building LLM applications, AI agents, RAG pipelines, and FastAPI backends—with 3+ years of remote industry experience alongside my studies."
       />
       <section className="container about-portrait-section">
         <div className="about-portrait">
@@ -54,16 +54,18 @@ export default function AboutPage() {
             I turn <em>curiosity</em> into things that work.
           </h2>
           <p>
-            My work lives across generative AI, agentic systems, backend
-            architecture, and full-stack delivery. I&apos;m currently CTO & AI
-            Researcher at Cynerza, where I lead an AI-first technical strategy
-            across product, automation, custom APIs, and multimodal experiences.
+            I&apos;m an AI/ML Engineer at Cynerza Systems Pvt. Ltd., building
+            LLM-based agents, automation workflows, REST APIs, and generative
+            and multimodal features for a company serving 200+ paying
+            customers. I deploy services on Azure and AWS with Docker and CI/CD.
           </p>
           <p>
-            Before that, I helped shape enterprise AI systems at Tecosys and
-            strengthened the production foundations behind AI services at
-            Kreaitor. I&apos;m at my best where an ambitious technical direction
-            needs an honest, working path forward.
+            At Tecosys AI, I worked on Nutaan&apos;s multilingual voice-AI
+            backend and single-handedly built nutaan-cli, an autonomous coding
+            agent published on PyPI. Earlier, I worked part-time on backend and
+            DevOps services at Kreaitor. My prompt and loop design work connects
+            model reasoning, tool use, and human approval in practical agent
+            workflows.
           </p>
           <div className="about-contact-line">
             <span>
@@ -73,6 +75,50 @@ export default function AboutPage() {
               <Mail size={16} /> Write me
             </a>
           </div>
+        </div>
+      </section>
+      <section className="container resume-section" aria-labelledby="education-heading">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Education</p>
+            <h2 id="education-heading">Learning, with<br /><em>practical application.</em></h2>
+          </div>
+        </div>
+        <div className="resume-education">
+          {education.map((item) => (
+            <article className="resume-card" key={item.qualification}>
+              <p className="eyebrow">{item.period}</p>
+              <h3>{item.qualification}</h3>
+              <p>{item.institution}</p>
+              <p className="resume-result">{item.result}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="container resume-section resume-qualifications">
+        <div>
+          <h2>Certifications</h2>
+          <ul className="resume-records">
+            {certifications.map((item) => (
+              <li key={item.title}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.title}<ArrowUpRight size={16} aria-hidden="true" />
+                </a>
+                <p>{item.issuer} · {item.date}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2>Achievements</h2>
+          <ul className="resume-records">
+            {achievements.map((item) => (
+              <li key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
       <section className="container principles-section">
@@ -123,6 +169,16 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="container about-links">
+        <a href={profile.resume} download="Haraprasad-Hota-Resume.pdf">
+          <Download size={19} aria-hidden="true" />
+          <span>Download the latest resume</span>
+          <ArrowUpRight size={19} aria-hidden="true" />
+        </a>
+        <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+          <Linkedin size={19} aria-hidden="true" />
+          <span>Connect on LinkedIn</span>
+          <ArrowUpRight size={19} aria-hidden="true" />
+        </a>
         <a href={profile.github} target="_blank" rel="noreferrer">
           <Github size={19} />
           <span>Explore the open-source trail</span>

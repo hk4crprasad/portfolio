@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="project-hero-grid">
           <div>
             <p className="eyebrow">
-              {project.category} · {project.year}
+              {project.category}{project.year && ` · ${project.year}`}
             </p>
             <h1>{project.title}</h1>
             <p className="project-kicker">{project.kicker}</p>
@@ -60,6 +60,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </a>
               ) : (
                 <span className="project-status">{project.status}</span>
+              )}
+              {project.packageUrl && (
+                <a className="button button-ghost" href={project.packageUrl} target="_blank" rel="noopener noreferrer">
+                  View on PyPI <ArrowUpRight size={17} aria-hidden="true" />
+                </a>
               )}
               {project.repository && <span>{project.status}</span>}
             </div>

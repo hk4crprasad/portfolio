@@ -1,6 +1,6 @@
 # Haraprasad Hota — portfolio
 
-Next.js App Router, React, TypeScript, CSS, and Lucide. Content lives in `data/portfolio.ts`; the original résumé remains in `resume.txt`. Project illustrations are abstract visuals, not product screenshots. The portrait is the existing GitHub profile image, stored locally. Locally served DM Sans and Playfair Display fonts include their licenses.
+Next.js App Router, React, TypeScript, CSS, and Lucide. Content lives in `data/portfolio.ts`; the latest uploaded resume is available at `public/resume.pdf`, with extracted text in `resume.txt`. The profile also includes AI prompt and loop design as requested by the owner. Project illustrations are abstract visuals, not product screenshots. The portrait is the existing GitHub profile image, stored locally. Locally served DM Sans and Playfair Display fonts include their licenses.
 
 ## Local development
 

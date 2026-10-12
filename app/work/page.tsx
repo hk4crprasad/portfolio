@@ -4,7 +4,7 @@ import { WorkExplorer } from "@/components/work-explorer";
 
 export const metadata = pageMetadata(
   "Selected Work",
-  "Explore LearnSync, YouTube Summarizer, Deepgram Voice Agent, and Nutaan AI: selected AI and product engineering projects.",
+  "Explore Nutaan CLI, MediKiosk, the SIH 2026 portal, LearnSync, and multilingual voice AI: selected AI/ML and product engineering projects.",
   "/work",
 );
 

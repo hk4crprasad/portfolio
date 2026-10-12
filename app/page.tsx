@@ -21,7 +21,7 @@ export default function Home() {
       <section className="hero container">
         <div className="hero-copy">
           <p className="eyebrow hero-kicker">
-            <span className="live-dot" /> Available for thoughtful builds
+            <span className="live-dot" /> Open to AI/ML & software engineering roles
           </p>
           <HeroTechText />
           <h1>
@@ -30,14 +30,15 @@ export default function Home() {
             Products that <i>move.</i>
           </h1>
           <p className="hero-intro">
-            I&apos;m Haraprasad Hota — an AI architect and agentic builder
-            turning ambitious ideas into intelligent, dependable systems.
+            I&apos;m Haraprasad Hota — an AI/ML engineer and AI prompt & loop
+            designer building LLM applications, RAG pipelines, and FastAPI
+            backends while pursuing my MCA.
           </p>
           <HeroActions />
           <div className="hero-signals">
-            <span>AI architecture</span>
-            <span>Prompt systems</span>
-            <span>Agentic builds</span>
+            <span>AI prompt design</span>
+            <span>Agent loops</span>
+            <span>FastAPI & RAG</span>
           </div>
         </div>
         <div className="hero-portrait-wrap">
@@ -85,9 +86,9 @@ export default function Home() {
             <div>
               <strong>3+</strong>
               <span>
-                years building
+                years of remote
                 <br />
-                in production
+                industry experience
               </span>
             </div>
             <div>
@@ -97,21 +98,21 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  OSS <ArrowUpRight size={20} aria-hidden="true" />
+                  1,950+ <ArrowUpRight size={20} aria-hidden="true" />
                 </a>
               </strong>
               <span>
-                explore my
+                GitHub contributions
                 <br />
-                public repositories
+                since January 2024
               </span>
             </div>
             <div>
-              <strong>01</strong>
+              <strong>MCA</strong>
               <span>
-                goal: meaningful
+                IMIT Cuttack
                 <br />
-                leverage
+                2025 — 2027
               </span>
             </div>
           </div>
@@ -164,8 +165,8 @@ export default function Home() {
               </div>
               <h3>AI systems</h3>
               <p>
-                LLM applications, RAG, evaluation-aware prompting, and agents
-                shaped around the work they need to do.
+                LLM applications, RAG, prompt design, and LangGraph ReAct loops
+                shaped around the work an agent needs to do.
               </p>
               <span className="cap-line" />
             </article>

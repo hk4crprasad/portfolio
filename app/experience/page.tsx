@@ -6,7 +6,7 @@ import { experience } from "@/data/portfolio";
 
 export const metadata = pageMetadata(
   "Experience",
-  "Professional experience at Cynerza, Tecosys, and Kreaitor across AI architecture, product engineering, and cloud delivery.",
+  "AI/ML and backend engineering experience at Cynerza Systems, Tecosys AI, and Kreaitor, building AI agents, FastAPI services, and cloud deployments alongside studies.",
   "/experience",
 );
 
@@ -23,7 +23,7 @@ export default function ExperiencePage() {
             <em>steady systems.</em>
           </>
         }
-        intro="A progression through product delivery, enterprise AI architecture, and technical leadership—with the same through-line: make smart systems genuinely usable."
+        intro="3+ years of remote industry experience alongside my studies—building LLM applications, AI agents, FastAPI backends, and the cloud workflows that keep them running."
       />
       <section className="container full-timeline">
         {experience.map((item, index) => (
@@ -50,23 +50,23 @@ export default function ExperiencePage() {
         <p className="eyebrow">A few numbers, in context</p>
         <div className="evidence-grid">
           <article>
-            <strong>70%</strong>
+            <strong>70+</strong>
             <p>
-              reduction in deployment time through Docker and CI/CD practices at
-              Tecosys.
+              languages supported by Nutaan, the voice-AI calling assistant I
+              worked on as a backend and AI engineer at Tecosys.
             </p>
           </article>
           <article>
-            <strong>$200K</strong>
+            <strong>300+</strong>
             <p>
-              development budget behind the Nutaan AI enterprise LLM platform.
+              paying users, alongside 150,000+ free users, served by Nutaan.
             </p>
           </article>
           <article>
-            <strong>95%</strong>
+            <strong>200+</strong>
             <p>
-              accuracy in the FastAPI-based YouTube summarizer and LinkedIn
-              scraper content processing work.
+              paying customers served by Cynerza Systems, where I build AI
+              agents, automation workflows, and REST APIs.
             </p>
           </article>
         </div>

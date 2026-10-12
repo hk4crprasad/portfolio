@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Mail } from "lucide-react";
+import { ArrowUpRight, GitBranch, Github, Linkedin, Mail } from "lucide-react";
 import { Brand } from "./brand";
 import { profile } from "@/data/portfolio";
 
@@ -26,6 +26,12 @@ export function Footer() {
           </a>
           <a href={`mailto:${profile.email}`} aria-label="Email Haraprasad">
             <Mail size={17} />
+          </a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Haraprasad on LinkedIn">
+            <Linkedin size={17} aria-hidden="true" />
+          </a>
+          <a href={profile.gitlab} target="_blank" rel="noopener noreferrer" aria-label="Haraprasad on GitLab">
+            <GitBranch size={17} aria-hidden="true" />
           </a>
         </div>
         <small>© {new Date().getFullYear()} Haraprasad Hota</small>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
+import { profile } from "@/data/portfolio";
 import { MotionLink } from "./motion-actions";
 export function HeroActions() {
   return (
@@ -12,6 +13,9 @@ export function HeroActions() {
         Start a conversation
         <ArrowUpRight size={17} aria-hidden="true" />
       </Link>
+      <a href={profile.resume} download="Haraprasad-Hota-Resume.pdf" className="text-link">
+        Download resume <Download size={17} aria-hidden="true" />
+      </a>
     </div>
   );
 }

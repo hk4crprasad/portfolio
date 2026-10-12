@@ -42,7 +42,7 @@ export function pageMetadata(
           url: new URL("/social-preview.png", siteUrl),
           width: 1200,
           height: 630,
-          alt: "Haraprasad Hota — AI architecture and product engineering",
+          alt: "Haraprasad Hota — AI/ML engineering, prompt design, and agent loops",
         },
       ],
     },

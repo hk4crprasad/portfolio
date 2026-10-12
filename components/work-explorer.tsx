@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { projects } from "@/data/portfolio";
 import { ProjectCard } from "./project-card";
-const filters = ["All", "AI Systems", "Product", "Voice", "Research"] as const;
+const filters = ["All", "AI Systems", "Product", "Voice"] as const;
 export function WorkExplorer() {
   const [activeFilter, setActiveFilter] =
     useState<(typeof filters)[number]>("All");

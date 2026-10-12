@@ -105,17 +105,24 @@ test("filters expose pressed state and announce matching projects", async ({
   page,
 }) => {
   await page.goto("/work");
-  for (const category of ["AI Systems", "Product", "Voice", "Research"]) {
+  for (const [category, titles] of [
+    ["AI Systems", ["Nutaan CLI", "YouTube Summarizer"]],
+    ["Product", ["MediKiosk", "SIH 2026 Hackathon Portal", "LearnSync"]],
+    ["Voice", ["Deepgram Voice Agent", "Nutaan Voice AI"]],
+  ] as const) {
     const button = page.getByRole("button", { name: category, exact: true });
     await button.click();
     await expect(button).toHaveAttribute("aria-pressed", "true");
-    await expect(page.locator(".project-card")).toHaveCount(1);
+    await expect(page.locator(".project-card")).toHaveCount(titles.length);
+    for (const title of titles) {
+      await expect(page.getByRole("heading", { name: title, exact: true, level: 2 })).toBeVisible();
+    }
     await expect(page.getByRole("status")).toContainText(
-      `1 project in ${category}`,
+      `${titles.length} projects in ${category}`,
     );
   }
   await page.getByRole("button", { name: "All", exact: true }).click();
-  await expect(page.locator(".project-card")).toHaveCount(4);
+  await expect(page.locator(".project-card")).toHaveCount(7);
 });
 
 test("email drafts validate, preserve input, hand off honestly, and provide clipboard recovery", async ({
